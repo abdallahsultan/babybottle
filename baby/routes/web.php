@@ -18,3 +18,12 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+/*
+|--------------------------------------------------------------------------
+| Site View
+|--------------------------------------------------------------------------
+
+*/
+Route::get('/about', 'SiteController@about')->name('about');
+Route::get('/gallery', 'SiteController@gallery')->name('gallery');
