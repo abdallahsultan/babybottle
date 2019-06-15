@@ -19,6 +19,16 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
+/*
+|--------------------------------------------------------------------------
+| Site View
+|--------------------------------------------------------------------------
+
+*/
+Route::get('/about', 'SiteController@about')->name('about');
+Route::get('/gallery', 'SiteController@gallery')->name('gallery');
+
 Route::group(['prefix' => 'admin'], function () {
 
     Route::get('/','HomeController@index');
@@ -119,3 +129,4 @@ Route::group(['prefix' => 'admin'], function () {
 
 
 });
+
