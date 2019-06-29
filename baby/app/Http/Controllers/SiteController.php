@@ -8,6 +8,8 @@ use App\Categories;
 use App\Products;
 use App\About;
 use App\Statistics;
+use App\Settings;
+use App\Contact;
 
 class SiteController extends Controller
 {
@@ -47,5 +49,28 @@ public function singleproduct($id){
    
    public function gallery(){
     return view('site.gallery');
+}
+public function send_mail(Request $request)
+{
+    $contact =new Contact();
+    $contact->email= $request->email;
+    $contact->message= $request->message;
+    $contact->save();
+    try{
+
+        $to      = Settings::where('key','ايميل استقبال الرسائل')->first()->value();
+        $subject = 'رساله من موقع بامبيني';
+        $message = $request->message;
+            $headers[] = 'MIME-Version: 1.0';
+            $headers[] = 'Content-type: text/html; charset=iso-8859-1';
+            $headers[] = 'From: Bambini <'.$request->email.'>';
+        mail($to, $subject, $message, implode("\r\n", $headers));
+        
+    }
+    catch(\Exception $e)
+    {
+        return back()->with('error','error');
+    }
+    return back()->with('add','success');
 }
 }

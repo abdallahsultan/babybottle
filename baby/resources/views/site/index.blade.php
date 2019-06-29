@@ -125,7 +125,7 @@
 	
 
 		<!-- Section: Our Gallery -->
-		<section>
+		{{-- <section>
 			<div class="container pb-70">
 				<div class="section-title text-center">
 					<div class="row">
@@ -249,8 +249,44 @@
 					</div>
 				</div>
 			</div>
-		</section>
-
+		</section> --}}
+		<section>
+				<div class="container pt-70 pb-70">
+						<div class="section-title text-center">
+								<div class="row">
+									<div class="col-md-8 col-md-offset-2">
+										<h2 class="text-uppercase line-bottom-center mt-0"><span class="text-theme-color-sky">البوم</span><span class="text-theme-color-red"> صور</span></h2>
+										<p></p>
+									</div>
+								</div>
+							</div>
+					<div class="section-content">
+					
+					<div class="row mb-30">
+					@foreach (App\Gallery::orderBy('id','desc')->take(7)->get() as $key=> $item)
+					<div style="margin-bottom:20px" class="col-xs-12 col-sm-4 @if($key%5 == 0) col-md-8  @else col-md-4 @endif">
+						<div class="gallery-block">
+						  <div class="gallery-thumb">
+							<img @if ($key%5 !=0 )
+							class="wow rubberBand" data-wow-duration="1.5s" data-wow-offset="10"
+							@endif alt="project" height="300px" src="{{asset('storage/app/'.$item->image)}}" class="img-fullwidth">
+						  </div>
+						  <div class="overlay-shade green"></div>
+						  <div class="icons-holder">
+							<div class="icons-holder-inner">
+							  <div class="gallery-icon">
+								<a href="{{asset('storage/app/'.$item->image)}}"  data-lightbox-gallery="gallery"><i class="pe-7s-expand1"></i></a>
+							  </div>
+							</div>
+						  </div>
+						</div>
+					  </div>
+					  @endforeach
+					</div>
+					 
+				  </div>
+				</div>
+			  </section>
 		
 
 		<!-- Section: Parents Say -->
@@ -314,90 +350,34 @@
 		</section>
 
 		<!-- Section: Our Stuff -->
-		<section class="layer-overlay overlay-white-9" data-bg-img="{{ asset('public/assets/images/bg/bg4.jpg')}}">
-			<div class="container">
-				<div class="section-title text-center">
-					<div class="row">
-						<div class="col-md-8 col-md-offset-2">
-							<h2 class="text-uppercase line-bottom-center mt-0"><span class="text-theme-color-sky">Meet</span> Our <span class="text-theme-color-red">Stuff</span></h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem autem<br> voluptatem obcaecati!</p>
-						</div>
-					</div>
+		<section class="layer-overlay overlay-white-7" data-bg-img="images/bg/bg5.jpg')}}">
+			<div class="container pb-70">
+			  <div class="section-title text-center">
+				<div class="row">
+				  <div class="col-md-8 col-md-offset-2">
+					<h2 class="text-uppercase line-bottom-center mt-0"><span class="text-theme-color-sky">طاقم</span>  <span class="text-theme-color-red">العمل</span></h2>
+				  
+				  </div>
 				</div>
-				<div class="section-content">
-					<div class="row">
-						<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 pb-sm-30">
-							<div class="image-box-thum">
-								<img class="img-fullwidth" alt="" src="{{ asset('public/assets/images/team/1.jpg')}}">
-							</div>
-							<div class="bg-white p-20 pt-10 pb-10">
-								<h5 class="name mb-5"><a href="#">Alex Smith -</a><span class="occupation font-12 font-weight-400 text-theme-color-blue letter-space-1"> 2 class/day</span></h5>
-								<h3 class="title mt-0">Art Teacher</h3>
-							</div>
-							<div class="bg-white border-top-dashed pl-20 pt-10 pb-5">
-							<ul class="styled-icons icon-theme-color-blue icon-sm icon-dark icon-circled">
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-								<li><a href="#"><i class="fa fa-skype"></i></a></li>
-							</ul>
-							</div>
-						</div>
-						<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 pb-sm-30">
-							<div class="image-box-thum">
-								<img class="img-fullwidth" alt="" src="{{ asset('public/assets/images/team/2.jpg')}}">
-							</div>
-							<div class="bg-white p-20 pt-10 pb-10">
-								<h5 class="name mb-5"><a href="#">Alex Smith -</a><span class="occupation font-12 font-weight-400 text-theme-color-sky letter-space-1"> 1 class/day</span></h5>
-								<h3 class="title mt-0">Game Teacher</h3>
-							</div>
-							<div class="bg-white border-top-dashed pl-20 pt-10 pb-5">
-							<ul class="styled-icons icon-theme-color-sky icon-sm icon-dark icon-circled">
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-								<li><a href="#"><i class="fa fa-skype"></i></a></li>
-							</ul>
-							</div>
-						</div>
-						<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 pb-sm-30">
-							<div class="image-box-thum">
-								<img class="img-fullwidth" alt="" src="{{ asset('public/assets/images/team/3.jpg')}}">
-							</div>
-							<div class="bg-white p-20 pt-10 pb-10">
-								<h5 class="name mb-5"><a href="#">Alex Smith -</a><span class="occupation font-12 font-weight-400 text-theme-color-green letter-space-1"> 4 class/day</span></h5>
-								<h3 class="title mt-0">Class Teacher</h3>
-							</div>
-							<div class="bg-white border-top-dashed pl-20 pt-10 pb-5">
-							<ul class="styled-icons icon-theme-color-green icon-sm icon-dark icon-circled">
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-								<li><a href="#"><i class="fa fa-skype"></i></a></li>
-							</ul>
-							</div>
-						</div>
-						<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 pb-sm-30">
-							<div class="image-box-thum">
-								<img class="img-fullwidth" alt="" src="{{ asset('public/assets/images/team/4.jpg')}}">
-							</div>
-							<div class="bg-white p-20 pt-10 pb-10">
-								<h5 class="name mb-5"><a href="#">Alex Smith -</a><span class="occupation font-12 font-weight-400 text-theme-color-orange letter-space-1"> 3 class/day</span></h5>
-								<h3 class="title mt-0">Subject Teacher</h3>
-							</div>
-							<div class="bg-white border-top-dashed pl-20 pt-10 pb-5">
-							<ul class="styled-icons icon-theme-color-orange icon-sm icon-dark icon-circled">
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-								<li><a href="#"><i class="fa fa-skype"></i></a></li>
-							</ul>
-							</div>
-						</div>
+			  </div>
+			  <div class="section-content">
+				<div class="row">
+				@foreach (App\Stuff::orderBy('id','desc')->take(4)->get() as $item)
+				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 pb-sm-30">
+					<div class="image-box-thum">
+					  <img height="300px" class="img-fullwidth" alt="" src="{{asset('storage/app/'.$item->image)}}">
 					</div>
+					<div class="bg-white p-20 pt-10 pb-10">
+					  <h5 class="name mb-5"><a href="#">{{$item->name}}</a></h5>
+					<h3 class="title mt-0" style="color:black !important">{{$item->job}}</h3>
+					</div>
+				  </div>
+				@endforeach
+			   
 				</div>
+			  </div>
 			</div>
-		</section>
+		  </section>
 	</div>
 	<!-- end main-content -->
 	
