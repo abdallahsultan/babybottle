@@ -26,117 +26,29 @@
     <section>
       <div class="container pt-70 pb-70">
         <div class="section-content">
+          
           <div class="row mb-30">
-            <div class="col-xs-12 col-sm-4 col-md-4">
+          @foreach (App\Gallery::orderBy('id','desc')->get() as $key=> $item)
+          <div style="margin-bottom:20px" class="col-xs-12 col-sm-4 @if($key%5 == 0) col-md-8  @else col-md-4 @endif">
               <div class="gallery-block">
                 <div class="gallery-thumb">
-                  <img alt="project" src="{{asset('public/assets/images/gallery/1.jpg')}}" class="img-fullwidth">
-                </div>
-                <div class="overlay-shade red"></div>
-                <div class="icons-holder">
-                  <div class="icons-holder-inner">
-                    <div class="gallery-icon">
-                      <a href="{{asset('public/assets/images/gallery/1.jpg')}}"  data-lightbox-gallery="gallery"><i class="pe-7s-expand1"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-8 col-md-8">
-              <div class="gallery-block">
-                <div class="gallery-thumb">
-                  <img alt="project" src="{{asset('public/assets/images/gallery/5.jpg')}}" class="img-fullwidth">
-                </div>
-                <div class="overlay-shade orange"></div>
-                <div class="icons-holder">
-                  <div class="icons-holder-inner">
-                    <div class="gallery-icon">
-                      <a href="{{asset('public/assets/images/gallery/5.jpg')}}"  data-lightbox-gallery="gallery"><i class="pe-7s-expand1"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row mb-30">
-            <div class="col-xs-12 col-sm-4 col-md-4">
-              <div class="gallery-block">
-                <div class="gallery-thumb">
-                  <img alt="project" src="{{asset('public/assets/images/gallery/2.jpg')}}" class="img-fullwidth">
+                  <img @if ($key%5 !=0 )
+                  class="wow rubberBand" data-wow-duration="1.5s" data-wow-offset="10"
+                  @endif alt="project" height="300px" src="{{asset('storage/app/'.$item->image)}}" class="img-fullwidth">
                 </div>
                 <div class="overlay-shade green"></div>
                 <div class="icons-holder">
                   <div class="icons-holder-inner">
                     <div class="gallery-icon">
-                      <a href="{{asset('public/assets/images/gallery/2.jpg')}}"  data-lightbox-gallery="gallery"><i class="pe-7s-expand1"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>            
-            <div class="col-xs-12 col-sm-4 col-md-4">
-              <div class="gallery-block">
-                <div class="gallery-thumb">
-                  <img alt="project" src="{{asset('public/assets/images/gallery/3.jpg')}}" class="img-fullwidth">
-                </div>
-                <div class="overlay-shade blue"></div>
-                <div class="icons-holder">
-                  <div class="icons-holder-inner">
-                    <div class="gallery-icon">
-                      <a href="{{asset('public/assets/images/gallery/3.jpg')}}"  data-lightbox-gallery="gallery"><i class="pe-7s-expand1"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>            
-            <div class="col-xs-12 col-sm-4 col-md-4">
-              <div class="gallery-block">
-                <div class="gallery-thumb">
-                  <img alt="project" src="{{asset('public/assets/images/gallery/4.jpg')}}" class="img-fullwidth">
-                </div>
-                <div class="overlay-shade yellow"></div>
-                <div class="icons-holder">
-                  <div class="icons-holder-inner">
-                    <div class="gallery-icon">
-                      <a href="{{asset('public/assets/images/gallery/4.jpg')}}"  data-lightbox-gallery="gallery"><i class="pe-7s-expand1"></i></a>
+                      <a href="{{asset('storage/app/'.$item->image)}}"  data-lightbox-gallery="gallery"><i class="pe-7s-expand1"></i></a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            @endforeach
           </div>
-          <div class="row">
-            <div class="col-xs-12 col-sm-8 col-md-8">
-              <div class="gallery-block">
-                <div class="gallery-thumb">
-                  <img alt="project" src="{{asset('public/assets/images/gallery/5.jpg')}}" class="img-fullwidth">
-                </div>
-                <div class="overlay-shade orange"></div>
-                <div class="icons-holder">
-                  <div class="icons-holder-inner">
-                    <div class="gallery-icon">
-                      <a href="{{asset('public/assets/images/gallery/5.jpg')}}"  data-lightbox-gallery="gallery"><i class="pe-7s-expand1"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-4">
-              <div class="gallery-block">
-                <div class="gallery-thumb">
-                  <img alt="project" src="{{asset('public/assets/images/gallery/1.jpg')}}" class="img-fullwidth">
-                </div>
-                <div class="overlay-shade red"></div>
-                <div class="icons-holder">
-                  <div class="icons-holder-inner">
-                    <div class="gallery-icon">
-                      <a href="{{asset('public/assets/images/gallery/1.jpg')}}"  data-lightbox-gallery="gallery"><i class="pe-7s-expand1"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+           
         </div>
       </div>
     </section>
