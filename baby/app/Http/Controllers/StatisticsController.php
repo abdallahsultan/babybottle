@@ -18,7 +18,15 @@ class StatisticsController extends Controller
     }
     public function save(Request $request)
     {
-        
+        Statistics::truncate();
+        foreach($request->values as $key=>$value)
+        {
+            $statistic = new Statistics();
+            $statistic->key = $request->keys[$key];
+            $statistic->value= $value;
+            $statistic->save();
+        }
+        return back()->with('add','success');
     }
     public function edit($id)
     {
