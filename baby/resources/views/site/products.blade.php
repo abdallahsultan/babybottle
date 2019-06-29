@@ -52,7 +52,7 @@
               <div class="course-details-box bg-silver-light border-1px clearfix mb-30">
                 <div class="col-md-5 col-lg-5 p-0">
                   <div class="thumb">
-                    <a href="{{route('singleproduct',$product->id)}}"><img class="img-fullwidth" alt="" src="{{asset('storge/app/'.$product->image)}}"></a>
+                    <a href="{{route('singleproduct',$product->id)}}"><img class="img-fullwidth" alt="" src="{{asset('storage/app/'.$product->image)}}"></a>
                   </div>
                 </div>
                 <div class="col-md-7 col-lg-7 p-0">
