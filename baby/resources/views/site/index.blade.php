@@ -1,5 +1,5 @@
 @extends('layouts.main')
-@section('title', 'ألرئيسية')
+@section('title', 'الرئيسية')
 @section('content')
     
 	
@@ -14,10 +14,10 @@
 						<div class="row">
 							<div class="col-md-6">
 								<div class="pt-60 pb-60">
-									<h3 class="font-24 mb-0">Best Kids Kider Garten</h3>
-									<h1 class="text-theme-color-blue font-Chewy text-uppercase letter-space mt-10">Welcome <span class="text-theme-color-orange">to Our</span> <span class="text-theme-color-lemon">baby</span> <span class="text-theme-color-sky">bottle</span></h1>
-									<h4 class="font-weight-400 mt-0">Every day we bring hope to millions of children in the world's <br>hardest places as a sign of God's unconditional love.</h4>
-									<a class="btn btn-colored btn-theme-color-sky btn-flat smooth-scroll-to-target mt-20" href="#donate-now">View Details</a>
+									<h3 class="font-24 mb-0">{{$slider->text1}}</h3>
+									<h1 class="text-theme-color-blue font-Chewy text-uppercase letter-space mt-10"> مرحبا <span class="text-theme-color-orange">بكم فى </span> <span class="text-theme-color-lemon">عالم</span> <span class="text-theme-color-sky">بامبيني</span></h1>
+									<h4 class="font-weight-400 mt-0">{{$slider->text3}}</h4>
+									<a class="btn btn-colored btn-theme-color-sky btn-flat smooth-scroll-to-target mt-20" href="#donate-now">شاهد المزيد</a>
 								</div>
 							</div>
 							<div class="col-md-6">
@@ -38,15 +38,15 @@
           <div class="row">
             <div class="col-md-6">
               <div class="about-thumb">
-                <img src="{{asset('public/assets/images/about/1.jpg')}}" class="wow fadeInLeftBig" data-wow-duration="1.5s" data-wow-offset="10"  alt="img1">
+                <img src="{{asset('storge/app/'.$about->image)}}" class="wow fadeInLeftBig" data-wow-duration="1.5s" data-wow-offset="10"  alt="img1">
               </div>
             </div>
             <div class="col-md-6">
               <div class="about-details">
-                <h2 class="text-theme-color-sky font-36 mt-0"> Welcome to Childhaven Kindergarten &amp; School</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, odioserunt provident maiores consectetur adipisicing elit. Aliquam odio dese runtesseu provident maiores libero porro dolorem est. Velit necessitatibus fugiat error incidunt excepturi doloribus officia aspernatur quod libero  Velit necessitatibus fugiat error incidunt excepturi doloribus officia</p>
+                <h2 class="text-theme-color-sky font-36 mt-0"> {{$about->title}}</h2>
+                <p>{{$about->description}}</p>
                 <div class="singnature mt-20">
-                  <img src="{{asset('public/assets/images/signature.png')}}" alt="img1">
+                  <img src="{{asset('storge/app/'.$about->signature)}}" alt="img1">
                 </div>
 
 			</div>
@@ -61,14 +61,15 @@
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2">
 							<h2 class="text-uppercase line-bottom-center mt-0"><span class="text-theme-color-sky">أختار </span> احدا <span class="text-theme-color-red">اقسامنا</span></h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem autem<br> voluptatem obcaecati!</p>
+							<p></p>
 						</div>
 					</div>
 				</div>
 				<div class="owl-carousel-3col">
-  <div class="item"><img src="http://placehold.it/400x200" alt=""></div>
-  <div class="item"><img src="http://placehold.it/400x200" alt=""></div>
-  <div class="item"><img src="http://placehold.it/400x200" alt=""></div>
+				@foreach($categories as $category)
+  <div class="item"><img class="wow pulse" data-wow-duration="1.5s" data-wow-offset="10" src="{{asset('storge/app/'.$category->image)}}" alt="{{$category->name}}"></div>
+  @endforeach
+  
 </div>
 				
 			</div>
@@ -80,8 +81,8 @@
 				<div class="section-title text-center">
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2">
-							<h2 class="text-uppercase line-bottom-center mt-0">Our <span class="text-theme-color-red">Classes</span></h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem autem<br> voluptatem obcaecati!</p>
+							<h2 class="text-uppercase line-bottom-center mt-0"><span class="text-theme-color-sky">منتجاتنا</span></h2>
+							<p></p>
 						</div>
 					</div>
 				</div>

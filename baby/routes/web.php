@@ -26,9 +26,17 @@ Route::get('/home', 'HomeController@index')->name('home');
 |--------------------------------------------------------------------------
 
 */
+Route::get('index', 'SiteController@index')->name('index');
+Route::get('/', 'SiteController@index')->name('/');
 Route::get('/about', 'SiteController@about')->name('about');
 Route::get('/gallery', 'SiteController@gallery')->name('gallery');
+Route::get('/products', 'SiteController@products')->name('products');
+Route::get('/singleproduct/{id}', 'SiteController@singleproduct')->name('singleproduct');
 
+
+Route::get('/404',function(){
+    return view('site.404');
+    });
 Route::group(['prefix' => 'admin'], function () {
 
     Route::get('/','HomeController@index');

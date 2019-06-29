@@ -13,7 +13,7 @@
             <div class="col-md-6">
               <h2 class="text-theme-color-yellow font-36">نبذه عنا </h2>
               <ol class="breadcrumb text-right mt-10 white">
-                <li><a href="#">الرئيسية</a></li>
+                <li><a href="{{route('/')}}">الرئيسية</a></li>
                
                 <li class="active">نبذه عنا</li>
               </ol>

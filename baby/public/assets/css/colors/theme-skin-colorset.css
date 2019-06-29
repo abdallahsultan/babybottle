@@ -5,7 +5,7 @@
 COLOR : Colorset
 Color code red 		: #F14545
 Color code orange : #F26522
-Color code blue 	: #88186E
+Color code blue 	: #45b1d9
 Color code sky 		: #1DABB8
 Color code lemon 	: #A6C437
 Color code yellow : #F39C12
@@ -19,7 +19,7 @@ Color code green  : #66CC99
   color: #EC774B !important;
 }
 .text-theme-color-blue {
-  color: #88186E !important;
+  color: #45b1d9 !important;
 }
 .text-theme-color-sky {
   color: #1DABB8 !important;
@@ -45,7 +45,7 @@ Color code green  : #66CC99
   background-color: #EC774B !important;
 }
 .bg-theme-color-blue {
-  background-color: #88186E !important;
+  background-color: #45b1d9 !important;
 }
 .bg-theme-color-sky {
   background-color: #1DABB8 !important;
@@ -135,7 +135,7 @@ Color code green  : #66CC99
   background-color: #EC774B;
 }
 .team-members.blue-color::after {
-  background-color: #88186E;
+  background-color: #45b1d9;
 }
 .team-members.green-color::after {
   background-color: #66CC99;
@@ -310,19 +310,19 @@ ul.list.theme-color-red.check li:before,
   color: #1DABB8;
 }
 .star-rating span::before {
-  color: #88186E !important;
+  color: #45b1d9 !important;
 }
 /* menuzord */
 .menuzord .menuzord-menu > li.active > a,
 .menuzord .menuzord-menu > li:hover > a,
 .menuzord .menuzord-menu ul.dropdown li:hover > a {
-  background: #88186E;
+  background: #45b1d9;
   color: #fff;
 }
 .menuzord .menuzord-menu > li.active > a i,
 .menuzord .menuzord-menu > li:hover > a i,
 .menuzord .menuzord-menu ul.dropdown li:hover > a i {
-  color: #88186E;
+  color: #45b1d9;
 }
 .menuzord .menuzord-menu > li.active > a i,
 .menuzord .menuzord-menu > li:hover > a i,
@@ -764,8 +764,8 @@ fieldset[disabled] .btn-theme-color-orange.focus {
 }
 .btn-theme-color-blue {
   color: #fff;
-  background-color: #88186E;
-  border-color: #88186E;
+  background-color: #45b1d9;
+  border-color: #45b1d9;
 }
 .btn-theme-color-blue:focus,
 .btn-theme-color-blue.focus {
@@ -812,11 +812,11 @@ fieldset[disabled] .btn-theme-color-blue:focus,
 .btn-theme-color-blue.disabled.focus,
 .btn-theme-color-blue[disabled].focus,
 fieldset[disabled] .btn-theme-color-blue.focus {
-  background-color: #88186E;
-  border-color: #88186E;
+  background-color: #45b1d9;
+  border-color: #45b1d9;
 }
 .btn-theme-color-blue .badge {
-  color: #88186E;
+  color: #45b1d9;
   background-color: #fff;
 }
 .btn-theme-color-sky {
@@ -1227,17 +1227,17 @@ fieldset[disabled] .btn-theme-color-green.focus {
 }
 /* icon blue color */
 .icon-theme-color-blue a {
-  color: #88186E;
+  color: #45b1d9;
 }
 .icon-theme-color-blue.icon-bordered a {
-  border-color: #88186E;
+  border-color: #45b1d9;
 }
 .icon-theme-color-blue.icon-bordered a:hover {
-  background-color: #88186E;
+  background-color: #45b1d9;
   color: #fff;
 }
 .icon-theme-color-blue.icon-dark a {
-  background-color: #88186E;
+  background-color: #45b1d9;
   color: #fff;
 }
 .icon-theme-color-blue.icon-dark a:hover {
@@ -1245,39 +1245,39 @@ fieldset[disabled] .btn-theme-color-green.focus {
   color: #e6e6e6;
 }
 .icon-theme-color-blue.icon-dark.icon-bordered a {
-  border-color: #88186E;
-  color: #88186E;
+  border-color: #45b1d9;
+  color: #45b1d9;
 }
 .icon-theme-color-blue.icon-dark.icon-bordered a:hover {
-  background-color: #88186E;
-  border-color: #88186E;
+  background-color: #45b1d9;
+  border-color: #45b1d9;
   color: #fff;
 }
 .icon-theme-color-blue.icon-gray a {
-  color: #88186E;
+  color: #45b1d9;
 }
 .icon-theme-color-blue.icon-gray a:hover {
   color: #5d104b;
 }
 .icon-theme-color-blue.icon-gray.icon-bordered a {
-  color: #88186E;
+  color: #45b1d9;
 }
 .icon-theme-color-blue.icon-gray.icon-bordered a:hover {
   background-color: #eeeeee;
   border-color: #eeeeee;
-  color: #88186E;
+  color: #45b1d9;
 }
 .icon-theme-color-blue a:hover {
   color: #5d104b;
 }
 .icon-hover-theme-color-blue a:hover {
-  background-color: #88186E;
-  border-color: #88186E;
+  background-color: #45b1d9;
+  border-color: #45b1d9;
   color: #fff;
 }
 .social-icons.icon-hover-theme-color-blue a:hover {
-  background-color: #88186E;
-  border-color: #88186E;
+  background-color: #45b1d9;
+  border-color: #45b1d9;
   color: #fff;
 }
 /* icon sky color */
