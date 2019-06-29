@@ -13,11 +13,11 @@
         </div>
         <div class="portlet-body">
           
-        <form  method="post" action="{{route('statistics.save')}}" enctype="multipart/form-data">
+        <form  method="post" action="{{route('settings.save')}}" enctype="multipart/form-data">
             @csrf
             <div class="form-body">
+                <div class="row">
                 @foreach ($rows as $row)
-                    <div class="row">
                         <div class="form-group col-md-6">
                                 <label>{{$row->key}}</label>
                                 <div class="input-group input-icon right">
@@ -27,11 +27,15 @@
                                         </strong>
                                     </span>
                                     <input name='keys[]' type="hidden" value="{{$row->key}}"  class="input-error form-control"  type="text" >
+                                @if ($row->key == 'اللوجو')
+                                <input name='file' type="file" class="input-error form-control"  type="text" >
+                                @else
                                 <input name='values[]' value="{{$row->value}}"  class="input-error form-control"  type="text" >
+                                @endif
                                 </div>
                         </div>
+                        @endforeach
                     </div>
-                     @endforeach
                 </div>
                 <div class="form-actions">
                     <div class="row">

@@ -38,7 +38,7 @@
           <div class="row">
             <div class="col-md-6">
               <div class="about-thumb">
-                <img src="{{asset('storge/app/'.$about->image)}}" class="wow fadeInLeftBig" data-wow-duration="1.5s" data-wow-offset="10"  alt="img1">
+                <img src="{{asset('storage/app/'.$about->image)}}" class="wow fadeInLeftBig" data-wow-duration="1.5s" data-wow-offset="10"  alt="img1">
               </div>
             </div>
             <div class="col-md-6">
@@ -46,7 +46,7 @@
                 <h2 class="text-theme-color-sky font-36 mt-0"> {{$about->title}}</h2>
                 <p>{{$about->description}}</p>
                 <div class="singnature mt-20">
-                  <img src="{{asset('storge/app/'.$about->signature)}}" alt="img1">
+                  <img src="{{asset('storage/app/'.$about->signature)}}" alt="img1">
                 </div>
 
 			</div>
@@ -67,7 +67,7 @@
 				</div>
 				<div class="owl-carousel-3col">
 				@foreach($categories as $category)
-  <div class="item"><img class="wow pulse" data-wow-duration="1.5s" data-wow-offset="10" src="{{asset('storge/app/'.$category->image)}}" alt="{{$category->name}}"></div>
+  <div class="item"><img class="wow pulse" data-wow-duration="1.5s" data-wow-offset="10" src="{{asset('storage/app/'.$category->image)}}" alt="{{$category->name}}"></div>
   @endforeach
   
 </div>

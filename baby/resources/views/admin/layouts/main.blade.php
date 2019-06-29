@@ -53,7 +53,7 @@
                     <!-- BEGIN LOGO -->
                     <div class="page-logo">
                         <a href="{{ url('/admin') }}">
-                            <img src="{{ asset('public/assets/images/logo.jpg') }}" style="width: 200px; height:47px" alt="logo" class="logo-default"> </a>
+                            <img src="{{ asset('storage/app/'.App\Settings::where('key','اللوجو')->first()->value )}}" style="width: 200px; height:47px" alt="logo" class="logo-default"> </a>
                         <div class="menu-toggler sidebar-toggler" style="padding: 5px;margin: 30px 0 0;height: 8px;text-align: center;">
                             <span></span>
                         </div>
@@ -193,13 +193,13 @@
                                     <span class="selected"></span>
                                 </a>
                             </li>
-                            <li class="nav-item ">
+                            {{-- <li class="nav-item ">
                                 <a href="{{ route('statistics.view')}}" class="nav-link nav-toggle">
                                     <i class="icon-bar-chart"></i>
                                     <span class="title">المستخدمين</span>
                                     <span class="selected"></span>
                                 </a>
-                            </li>
+                            </li> --}}
                             <li class="nav-item ">
                                 <a href="{{ route('settings.view')}}" class="nav-link nav-toggle">
                                     <i class="icon-bar-chart"></i>
