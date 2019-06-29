@@ -113,8 +113,8 @@
 							<img src="{{ asset('public/assets/images/logo.jpg') }}" alt="">
 						</a>
 						<ul class="menuzord-menu">
-			  <li class="active"><a href="{{url('/')}}">الرئيسية</a></li>
-			                <li><a href="#">منتجاتنا </a></li>
+			  <li class="active"><a href="{{route('/')}}">الرئيسية</a></li>
+			                <li><a href="{{route('products')}}">منتجاتنا </a></li>
 							
 							<li><a href="{{route('gallery')}}">ألبوم صور </a></li>
 							<li><a href="{{route('about')}}">نبذه عنا  </a></li>
