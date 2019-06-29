@@ -149,15 +149,7 @@
 					<div class="widget dark"> <img alt="" src="{{ asset('storage/app/'.$logo->value) }}">
 					@php $about_desc=substr($about->description,0,100); @endphp 
 						<p class="font-13 mt-20 mb-10">{{$about_desc}} <a class="text-theme-color-red" href="{{route('about')}}">اقراء المذيد</a> </p>
-						<ul class="list-inline mt-5">
-						@php $number1=App\Settings::where('key','رقم الموبايل 1')->first(); @endphp
-						@php $mail=App\Settings::where('key','الايميل')->first(); @endphp
-						@php $website=App\Settings::where('key','لينك الموقع')->first(); @endphp
 						
-							<li class="m-0 pl-10 pr-10"> <i class="fa fa-phone text-theme-color-red mr-5"></i> <a class="text-gray" href="tel:{{$number1->value}}">{{$number1->value}}</a> </li>
-							<li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o text-theme-color-red mr-5"></i> <a class="text-gray" href="mailto:{{$mail->value}}">{{$mail->value}}</a> </li><br>
-							<li class="m-0 pl-10 pr-10"> <i class="fa fa-globe text-theme-color-red mr-5"></i> <a class="text-gray" href="{{$website->value}}">{{$website->value}}</a> </li>
-						</ul>
 					</div>
 				</div>
 				@php $products_count=App\Products::orderby('count','desc')->take(3)->get(); @endphp
@@ -179,7 +171,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-6 col-md-3">
+				<!-- <div class="col-sm-6 col-md-3">
 					<div class="widget dark">
 						<h5 class="widget-title line-bottom">ألبوم صور </h5>
 						<div id="flickr-feed" class="clearfix">
@@ -187,7 +179,30 @@
 							</script>
 						</div>
 					</div>
-				</div>
+				</div> -->
+				<div class="col-md-3">
+          <div class="widget dark">
+		  <h5 class="widget-title line-bottom">تابعنا من خلال:</h5>
+            <ul class="styled-icons icon-sm icon-bordered icon-circled clearfix">
+			@php $facebook=App\Settings::where('key','فيسبوك')->first(); @endphp
+						@php $twitter=App\Settings::where('key','تويتر')->first(); @endphp
+						@php $instgram=App\Settings::where('key','انستجرام')->first(); @endphp
+							<li><a href="{{$facebook->value}}"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="{{$twitter->value}}"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="{{$instgram->value}}"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+			<h5 class="widget-title line-bottom">تواصل </h5>
+			<ul class="list-inline mt-5">
+						@php $number1=App\Settings::where('key','رقم الموبايل 1')->first(); @endphp
+						@php $mail=App\Settings::where('key','الايميل')->first(); @endphp
+						@php $website=App\Settings::where('key','لينك الموقع')->first(); @endphp
+						
+							<li class="m-0 pl-10 pr-10"> <i class="fa fa-phone text-theme-color-red mr-5"></i> <a class="text-gray" href="tel:{{$number1->value}}">{{$number1->value}}</a> </li>
+							<li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o text-theme-color-red mr-5"></i> <a class="text-gray" href="mailto:{{$mail->value}}">{{$mail->value}}</a> </li><br>
+							<li class="m-0 pl-10 pr-10"> <i class="fa fa-globe text-theme-color-red mr-5"></i> <a class="text-gray" href="{{$website->value}}">{{$website->value}}</a> </li>
+						</ul>
+          </div>
+        </div>
 				<div class="col-sm-6 col-md-3">
 					<div class="widget dark">
 						<h5 class="widget-title line-bottom">تواصل معنا</h5>
