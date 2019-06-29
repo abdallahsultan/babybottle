@@ -28,11 +28,10 @@
         <div class="row">
           <div class="col-md-8 blog-pull-right">
             <div class="single-service">
-              <img src="{{asset('public/assets/images/course/course-details.jpg')}}" alt="">
-              <h3 class="line-bottom text-theme-color-red text-uppercase mt-30 mb-20"><span class="text-theme-color-blue">Course</span> Details</h3>
+              <img src="{{asset('storage/app/'.$product->image)}}" alt="">
+              <h3 class="line-bottom text-theme-color-red text-uppercase mt-30 mb-20"><span class="text-theme-color-blue">{{$product->name}}</span></h3>
               
-              <blockquote class="drop-caps text-colored mb-60">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore voluptatem officiis quod animi possimus a, iure nam sunt quas aperiam non recusandae reprehenderit, nesciunt cumque pariatur totam.</blockquote>
-              <p class="drop-caps text-colored mb-60">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore suscipit, inventore aliquid incidunt, quasi error! Natus esse rem eaque asperiores eligendi dicta quidem iure, excepturi doloremque eius neque autem sint error qui tenetur, modi provident aut, maiores laudantium reiciendis expedita. Eligendi</p>
+              <blockquote >{{$product->description}}</blockquote>
             
             </div>
           </div>

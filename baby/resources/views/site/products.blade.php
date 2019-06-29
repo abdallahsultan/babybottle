@@ -5,7 +5,7 @@
   <!-- Start main-content -->
   <div class="main-content">
     <!-- Section: inner-header -->
-    <section class="inner-header divider layer-overlay overlay-dark-7" data-bg-img="public/assets/images/bg/inner-header.jpg">
+    <section class="inner-header divider layer-overlay overlay-dark-7" data-bg-img="public/assets/images/bg/bg9.jpg">
       <div class="container pt-120 pb-60">
         <!-- Section Content -->
         <div class="section-content">
@@ -34,7 +34,7 @@
        <ul id="myTab2" class="nav nav-pills boot-tabs">
            @php $count=1; @endphp
            @foreach($categories as $category)
-  <li @if($count==1)class="active"@endif><a style="    border: 2px solid;" href="#cat{{$category->id}}" data-toggle="tab">{{$category->name}}</a></li>
+  <li @if($count==1)class="active"@endif><a style="    border: 2px solid;" class="hvr-float-shadow"  href="#cat{{$category->id}}" data-toggle="tab">{{$category->name}}</a></li>
   @php $count++; @endphp
 
      @endforeach
@@ -52,7 +52,7 @@
               <div class="course-details-box bg-silver-light border-1px clearfix mb-30">
                 <div class="col-md-5 col-lg-5 p-0">
                   <div class="thumb">
-                    <a href="{{route('singleproduct',$product->id)}}"><img class="img-fullwidth" alt="" src="{{asset('storge/app/'.$product->image)}}"></a>
+                    <a href="{{route('singleproduct',$product->id)}}"><img style="height: 205px;" class="img-fullwidth" alt="" src="{{asset('storage/app/'.$product->image)}}"></a>
                   </div>
                 </div>
                 <div class="col-md-7 col-lg-7 p-0">
@@ -63,9 +63,9 @@
                     <p class="font-14 text-black-333 pt-0">{{$product->description}}</p>
                     <div class="course-details-bottom mt-15">
                       <ul class="list-inline">
-                       <li>Capacity<span>20 kids</span></li>
-                       <li>Duration<span>45 min</span></li>
-                       <li>Age<span>5y - 6y</span></li>
+                      <li>النوع<span>{{$product->type}}</span></li>
+											 <li>الحجم<span>{{$product->size}}</span></li>
+                       <!-- <li>Age<span>5y - 6y</span></li> -->
                       </ul>
                     </div>
                   </div>
