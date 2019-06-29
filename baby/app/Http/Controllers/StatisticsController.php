@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Statistics;
+use Illuminate\Support\Facades\Input;
 
 class StatisticsController extends Controller
 {
@@ -14,9 +16,9 @@ class StatisticsController extends Controller
     {
         
     }
-    public function save(Request $request,$id)
+    public function save(Request $request)
     {
-
+        
     }
     public function edit($id)
     {
@@ -28,7 +30,9 @@ class StatisticsController extends Controller
     }
     public function view()
     {
-
+        $title ='الاحصائيات';
+        $rows =Statistics::all();
+        return view('admin.statistics.view',compact('rows','title'));
     }
     public function delete(Requst $request ,$id)
     {

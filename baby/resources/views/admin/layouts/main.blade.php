@@ -58,6 +58,8 @@
                             <span></span>
                         </div>
                     </div>
+                 
+                    
                     <!-- END LOGO -->
                     <!-- BEGIN RESPONSIVE MENU TOGGLER -->
                     <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
@@ -89,6 +91,16 @@
                             <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
                           
                             <!-- END QUICK SIDEBAR TOGGLER -->
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                          document.getElementById('logout-form').submit();">
+                            تسجيل الخروج
+                         </a>
+ 
+                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                             @csrf
+                         </form>
+                     
                         </ul>
                     </div>
                     <!-- END TOP NAVIGATION MENU -->
@@ -126,11 +138,73 @@
                             <!-- END SIDEBAR TOGGLER BUTTON -->
                             <!-- DOC: To remove the search box from the sidebar you just need to completely remove the below "sidebar-search-wrapper" LI element -->
                             <li class="nav-item ">
-                                <a href="{{url('reports')}}" class="nav-link nav-toggle">
+                                <a href="{{ route('categories.view')}}" class="nav-link nav-toggle">
                                     <i class="icon-bar-chart"></i>
-                                    <span class="title">تقارير المبيعات</span>
+                                    <span class="title">الفئات</span>
                                     <span class="selected"></span>
-                                   
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a href="{{ route('products.view')}}" class="nav-link nav-toggle">
+                                    <i class="icon-bar-chart"></i>
+                                    <span class="title">المنتجات</span>
+                                    <span class="selected"></span>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a href="{{ route('gallery.view')}}" class="nav-link nav-toggle">
+                                    <i class="icon-bar-chart"></i>
+                                    <span class="title">البوم صور</span>
+                                    <span class="selected"></span>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a href="{{ route('sliders.view')}}" class="nav-link nav-toggle">
+                                    <i class="icon-bar-chart"></i>
+                                    <span class="title">البانر</span>
+                                    <span class="selected"></span>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a href="{{ route('about.view')}}" class="nav-link nav-toggle">
+                                    <i class="icon-bar-chart"></i>
+                                    <span class="title">من نحن</span>
+                                    <span class="selected"></span>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a href="{{ route('contact.view')}}" class="nav-link nav-toggle">
+                                    <i class="icon-bar-chart"></i>
+                                    <span class="title">رسائل الموقع</span>
+                                    <span class="selected"></span>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a href="{{ route('stuff.view')}}" class="nav-link nav-toggle">
+                                    <i class="icon-bar-chart"></i>
+                                    <span class="title"> طاقم العمل</span>
+                                    <span class="selected"></span>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a href="{{ route('statistics.view')}}" class="nav-link nav-toggle">
+                                    <i class="icon-bar-chart"></i>
+                                    <span class="title">احصائيات</span>
+                                    <span class="selected"></span>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a href="{{ route('statistics.view')}}" class="nav-link nav-toggle">
+                                    <i class="icon-bar-chart"></i>
+                                    <span class="title">المستخدمين</span>
+                                    <span class="selected"></span>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a href="{{ route('settings.view')}}" class="nav-link nav-toggle">
+                                    <i class="icon-bar-chart"></i>
+                                    <span class="title">الاعدادات العامه</span>
+                                    <span class="selected"></span>
                                 </a>
                             </li>
                           
@@ -186,15 +260,7 @@
             </div>
             <!-- END CONTAINER -->
             <!-- BEGIN FOOTER -->
-            <div class="page-footer">
-                <div class="page-footer-inner"> 2016 &copy; Metronic Theme By
-                    <a target="_blank" href="http://keenthemes.com">Keenthemes</a> &nbsp;|&nbsp;
-                    <a href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" title="Purchase Metronic just for 27$ and get lifetime updates for free" target="_blank">Purchase Metronic!</a>
-                </div>
-                <div class="scroll-to-top">
-                    <i class="icon-arrow-up"></i>
-                </div>
-            </div>
+           
             <!-- END FOOTER -->
         </div>
         <!-- BEGIN QUICK NAV -->

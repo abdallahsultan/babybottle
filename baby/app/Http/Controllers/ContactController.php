@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Contact;
 
 class ContactController extends Controller
 {
@@ -28,10 +29,13 @@ class ContactController extends Controller
     }
     public function view()
     {
-
+        $rows =Contact::orderBy('id','desc')->get();
+        $title = 'رسائل الموقع';
+        return view('admin.contacts.view',compact('rows','title'));
     }
     public function delete(Requst $request ,$id)
     {
-
+        Contact::findorfail($id)->delete();
+        return redirect(route('contact.view'));
     }
 }
