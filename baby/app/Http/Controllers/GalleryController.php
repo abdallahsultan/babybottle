@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Gallery;
 
 class GalleryController extends Controller
 {
@@ -12,26 +13,30 @@ class GalleryController extends Controller
     }
     public function add()
     {
-        
+        $title ='اضافه صوره';
+        return view('admin.gallery.add',compact('title'));
     }
-    public function save(Request $request,$id)
+    public function save(Request $request)
     {
+        $gallery =new Gallery();
+        if($request->hasFile('file'))
+            $gallery->image   = request()->file('file')->store('gallery');
+        $gallery->save();
+        return back()->with('add','success');
 
     }
-    public function edit($id)
-    {
-
-    }
-    public function update(Request $request,$id)
-    {
-
-    }
+  
+   
     public function view()
     {
-
+        $rows = gallery::all();
+        $title = "مشاهده الصور";
+        return view('admin.gallery.view',compact('rows','title'));
     }
-    public function delete(Requst $request ,$id)
+    public function delete(Request $request ,$id)
     {
+        Gallery::findOrFail($id)->delete();
+        return redirect(route('gallery.view'));
 
     }
 }
