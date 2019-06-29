@@ -109,15 +109,15 @@
 			<div class="header-nav-wrapper navbar-scrolltofixed bg-white">
 				<div class="container">
 					<nav id="menuzord-right" class="menuzord default">
-						<a class="menuzord-brand pull-left flip xs-pull-center mt-20 pt-5 mt-sm-10 pt-sm-0" href="index-mp-layout1.html">
+						<a class="menuzord-brand pull-left flip xs-pull-center mt-20 pt-5 mt-sm-10 pt-sm-0" href="{{route('/')}}">
 							<img src="{{ asset('public/assets/images/logo.jpg') }}" alt="">
 						</a>
 						<ul class="menuzord-menu">
-			  <li class="active"><a href="{{route('/')}}">الرئيسية</a></li>
-			                <li><a href="{{route('products')}}">منتجاتنا </a></li>
+			  <li class="active"><a class="hvr-bounce-in"  href="{{route('/')}}">الرئيسية</a></li>
+			                <li><a class="hvr-bounce-in" href="{{route('products')}}">منتجاتنا </a></li>
 							
-							<li><a href="{{route('gallery')}}">ألبوم صور </a></li>
-							<li><a href="{{route('about')}}">نبذه عنا  </a></li>
+							<li><a class="hvr-bounce-in" href="{{route('gallery')}}">ألبوم صور </a></li>
+							<li><a class="hvr-bounce-in" href="{{route('about')}}">نبذه عنا  </a></li>
 							
 						</ul>
 					</nav>
@@ -131,7 +131,7 @@
 		<div class="container pt-70 pb-40">
 			<div class="row border-bottom-black">
 				<div class="col-sm-6 col-md-3">
-					<div class="widget dark"> <img alt="" src="{{ asset('public/assets/images/logo-wide-white-footer.png')}}">
+					<div class="widget dark"> <img alt="" src="{{ asset('public/assets/images/logo.jpg')}}">
 						<p class="font-13 mt-20 mb-10">Childhaven is a non profit charity and crowdfunding template with web elements which helps you to build your own charity or any non profit templatesite <a class="text-theme-color-red" href="#">read more</a> </p>
 						<ul class="list-inline mt-5">
 							<li class="m-0 pl-10 pr-10"> <i class="fa fa-phone text-theme-color-red mr-5"></i> <a class="text-gray" href="#">123-456-789</a> </li>

@@ -88,102 +88,32 @@
 				</div>
 				<div class="section-content">
 					<div class="row">
+					@foreach($products as $product)
 						<div class="col-sm-12 col-md-6 col-lg-6">
 							<div class="course-details-box bg-silver-light border-1px clearfix mb-30">
 								<div class="col-md-5 col-lg-5 p-0">
 									<div class="thumb">
-										<img class="img-fullwidth" alt="" src="{{ asset('public/assets/images/course/1.jpg')}}">
+									<a href="{{route('singleproduct',$product->id)}}">	<img style="height: 205px;" class="img-fullwidth" alt="" src="{{ asset('storage/app/'.$product->image)}}"></a>
 									</div>
 								</div>
 								<div class="col-md-7 col-lg-7 p-0">
 									<div class="course-details clearfix p-20 pt-15">
-										<h4 class="price-tag">$52</h4>
-										<h3 class="title font-26 mt-0 mb-0"><a class="text-theme-color-red" href="#">Course One</a></h3>
-										<h5 class="text-gray-darkgray font-weight-300 mt-5"><span class="text-theme-color-sky font-weight-600 mr-5">Class Time :</span> 9.00am - 9.45pm</h5>
-										<p class="font-14 text-black-333 pt-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque iste alias unde odio architecto minus explicabo!</p>
+										<h4 class="price-tag">EGP {{$product->price}}</h4>
+										<h3 class="title font-26 mt-0 mb-0"><a class="text-theme-color-red" href="{{route('singleproduct',$product->id)}}">{{$product->name}}</a></h3>
+										<h5 class="text-gray-darkgray font-weight-300 mt-5"><span class="text-theme-color-sky font-weight-600 mr-5">{{$product->category->name}}</span></h5>
+										<p class="font-14 text-black-333 pt-0">{{$product->description}}</p>
 										<div class="course-details-bottom mt-15">
 											<ul class="list-inline">
-											 <li>Capacity<span>20 kids</span></li>
-											 <li>Duration<span>45 min</span></li>
-											 <li>Age<span>5y - 6y</span></li>
+											 <li>النوع<span>{{$product->type}}</span></li>
+											 <li>الحجم<span>{{$product->size}}</span></li>
+											 <!-- <li>Age<span>5y - 6y</span></li> -->
 											</ul>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="col-sm-12 col-md-6 col-lg-6">
-							<div class="course-details-box bg-silver-light border-1px clearfix mb-30">
-								<div class="col-md-5 col-lg-5 p-0">
-									<div class="thumb">
-										<img class="img-fullwidth" alt="" src="{{ asset('public/assets/images/course/2.jpg')}}">
-									</div>
-								</div>
-								<div class="col-md-7 col-lg-7 p-0">
-									<div class="course-details clearfix p-20 pt-15">
-										<h4 class="price-tag">$52</h4>
-										<h3 class="title font-26 mt-0 mb-0"><a class="text-theme-color-red" href="#">Course One</a></h3>
-										<h5 class="text-gray-darkgray font-weight-300 mt-5"><span class="text-theme-color-sky font-weight-600 mr-5">Class Time :</span> 9.00am - 9.45pm</h5>
-										<p class="font-14 text-black-333 pt-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque iste alias unde odio architecto minus explicabo!</p>
-										<div class="course-details-bottom mt-15">
-											<ul class="list-inline">
-											 <li>Capacity<span>20 kids</span></li>
-											 <li>Duration<span>45 min</span></li>
-											 <li>Age<span>5y - 6y</span></li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-12 col-md-6 col-lg-6">
-							<div class="course-details-box bg-silver-light border-1px clearfix mb-30">
-								<div class="col-md-5 col-lg-5 p-0">
-									<div class="thumb">
-										<img class="img-fullwidth" alt="" src="{{ asset('public/assets/images/course/3.jpg')}}">
-									</div>
-								</div>
-								<div class="col-md-7 col-lg-7 p-0">
-									<div class="course-details clearfix p-20 pt-15">
-										<h4 class="price-tag">$52</h4>
-										<h3 class="title font-26 mt-0 mb-0"><a class="text-theme-color-red" href="#">Course One</a></h3>
-										<h5 class="text-gray-darkgray font-weight-300 mt-5"><span class="text-theme-color-sky font-weight-600 mr-5">Class Time :</span> 9.00am - 9.45pm</h5>
-										<p class="font-14 text-black-333 pt-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque iste alias unde odio architecto minus explicabo!</p>
-										<div class="course-details-bottom mt-15">
-											<ul class="list-inline">
-											 <li>Capacity<span>20 kids</span></li>
-											 <li>Duration<span>45 min</span></li>
-											 <li>Age<span>5y - 6y</span></li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-12 col-md-6 col-lg-6">
-							<div class="course-details-box bg-silver-light border-1px clearfix mb-30">
-								<div class="col-md-5 col-lg-5 p-0">
-									<div class="thumb">
-										<img class="img-fullwidth" alt="" src="{{ asset('public/assets/images/course/4.jpg')}}">
-									</div>
-								</div>
-								<div class="col-md-7 col-lg-7 p-0">
-									<div class="course-details clearfix p-20 pt-15">
-										<h4 class="price-tag">$52</h4>
-										<h3 class="title font-26 mt-0 mb-0"><a class="text-theme-color-red" href="#">Course One</a></h3>
-										<h5 class="text-gray-darkgray font-weight-300 mt-5"><span class="text-theme-color-sky font-weight-600 mr-5">Class Time :</span> 9.00am - 9.45pm</h5>
-										<p class="font-14 text-black-333 pt-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque iste alias unde odio architecto minus explicabo!</p>
-										<div class="course-details-bottom mt-15">
-											<ul class="list-inline">
-											 <li>Capacity<span>20 kids</span></li>
-											 <li>Duration<span>45 min</span></li>
-											 <li>Age<span>5y - 6y</span></li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+					@endforeach	
 					</div>
 				</div>
 			</div>
@@ -369,34 +299,16 @@
 		<section class="divider cloud-img parallax layer-overlay overlay-gradient" data-bg-img="public/assets/images/bg/bg10.jpg" data-parallax-ratio="0.7">
 			<div class="container pt-90 pb-150">
         <div class="row">
-          <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
+          @foreach($statistics as $statistic)
+		  <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
             <div class="funfact text-center">
-              <i class="pe-7s-users mt-5 text-white"></i>
-              <h2 data-animation-duration="2000" data-value="864" class="animate-number text-theme-color-yellow font-Chewy font-42 font-weight-300 mt-0 mb-0">0</h2>
-              <h5 class="text-white text-uppercase font-weight-600">Qualified Teachers</h5>
+              <i class="{{$statistic->icon}} mt-5 text-white"></i>
+              <h2 data-animation-duration="2000" data-value="{{$statistic->value}}" class="animate-number text-theme-color-yellow font-Chewy font-42 font-weight-300 mt-0 mb-0">0</h2>
+              <h3 class="text-white text-uppercase font-weight-600">{{$statistic->key}}</h3>
             </div>
           </div>
-          <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
-            <div class="funfact text-center">
-              <i class="pe-7s-study mt-5 text-white"></i>
-              <h2 data-animation-duration="2000" data-value="486" class="animate-number text-theme-color-blue font-Chewy font-42 font-weight-300 mt-0 mb-0">0</h2>
-              <h5 class="text-white text-uppercase font-weight-600">Successful Kids</h5>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
-            <div class="funfact text-center">
-              <i class="pe-7s-smile mt-5 text-white"></i>
-              <h2 data-animation-duration="2000" data-value="1468" class="animate-number text-theme-color-green font-Chewy font-42 font-weight-300 mt-0 mb-0">0</h2>
-              <h5 class="text-white text-uppercase font-weight-600">Happy Parents</h5>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
-            <div class="funfact text-center">
-              <i class="pe-7s-medal mt-5 text-white"></i>
-              <h2 data-animation-duration="2000" data-value="32" class="animate-number text-theme-color-sky font-Chewy font-42 font-weight-300 mt-0 mb-0">0</h2>
-              <h5 class="text-white text-uppercase font-weight-600">Award Won</h5>
-            </div>
-          </div>
+		  @endforeach
+       
         </div>
       </div>
 		</section>
