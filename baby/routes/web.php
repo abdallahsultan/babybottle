@@ -32,7 +32,7 @@ Route::get('/about', 'SiteController@about')->name('about');
 Route::get('/gallery', 'SiteController@gallery')->name('gallery');
 Route::get('/products', 'SiteController@products')->name('products');
 Route::get('/singleproduct/{id}', 'SiteController@singleproduct')->name('singleproduct');
-Route::post('/send_mail_to', 'SiteController@send_email')->name('send_mail_to');
+Route::post('/send_mail_to', 'SiteController@send_mail')->name('send_mail_to');
 
 
 

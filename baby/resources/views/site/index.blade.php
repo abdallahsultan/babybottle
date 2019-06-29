@@ -7,7 +7,7 @@
 	<div class="main-content">
 
 		<!-- Section: home -->
-		<section id="home" class="divider cloud-img parallax layer-overlay overlay-gradient" data-bg-img="public/assets/images/bg/bg14.jpg">
+		<section id="home" class="divider cloud-img parallax layer-overlay overlay-gradient" data-bg-img="{{ asset('storage/app/'.$slider->image)}}">
 			<div class="display-table">
 				<div class="display-table-cell">
 					<div class="container pt-100 pb-100">
@@ -17,12 +17,12 @@
 									<h3 class="font-24 mb-0">{{$slider->text1}}</h3>
 									<h1 class="text-theme-color-blue font-Chewy text-uppercase letter-space mt-10"> مرحبا <span class="text-theme-color-orange">بكم فى </span> <span class="text-theme-color-lemon">عالم</span> <span class="text-theme-color-sky">بامبيني</span></h1>
 									<h4 class="font-weight-400 mt-0">{{$slider->text3}}</h4>
-									<a class="btn btn-colored btn-theme-color-sky btn-flat smooth-scroll-to-target mt-20" href="#donate-now">شاهد المزيد</a>
+									<a class="btn btn-colored btn-theme-color-sky btn-flat smooth-scroll-to-target mt-20" href="{{route('products')}}">شاهد المزيد</a>
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="about-thumb">
-								<img src="{{ asset('public/assets/images/about/3.gif')}}" class="wow flipInY" data-wow-duration="1.5s" data-wow-offset="10"  width="70%" alt="">
+								<img src="{{ asset('storage/app/'.$slider->gif)}}" class="wow flipInY" data-wow-duration="1.5s" data-wow-offset="10"  width="70%" alt="">
 							</div>
 							</div>
 						</div>
